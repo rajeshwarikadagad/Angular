@@ -1,0 +1,125 @@
+<div fxLayout="column" fxLayoutAlign="start start" fxFlex="60">
+    <h1>1. Finding the smallest missing positive number from a given array</h1>
+    <div fxLayout="row" fxLayoutAlign="space-around center" [style.width]="'-webkit-fill-available'">
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Clearable input</mat-label>
+            <input matInput [(ngModel)]="arrList">
+            <button *ngIf="arrList" matSuffix mat-icon-button aria-label="Clear" (click)="arrList=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <h4>
+            {{smallestPosNum}}
+        </h4>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="findSmallestMissingPositiveNum()">Find Number</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="showLogic(this.findSmallestMissingPositiveNum)">Show
+                Logic</button>
+        </div>
+
+    </div>
+    <hr>
+    <h1>2. Finding the smallest number whose sum is equal to given number N</h1>
+    <div fxLayout="row" fxLayoutAlign="space-around center" [style.width]="'-webkit-fill-available'">
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Clearable input</mat-label>
+            <input matInput [(ngModel)]="givenNum">
+        </mat-form-field>
+        <h4>
+            {{smallestNum}}
+        </h4>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="smallestNumSum()">Find Number</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="showLogic(this.smallestNumSum, this.getSum)">Show Logic</button>
+        </div>
+
+    </div>
+
+    <hr>
+    <h1>3. Reverse a given array</h1>
+    <div fxLayout="row" fxLayoutAlign="space-around center" [style.width]="'-webkit-fill-available'">
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Clearable input</mat-label>
+            <input matInput [(ngModel)]="rvrArray">
+        </mat-form-field>
+        <h4>
+            {{rvrArrayList}}
+        </h4>
+
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="reverseGivenArray()">Reverse Array</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="showLogic(this.reverseGivenArray)">Show Logic</button>
+        </div>
+    </div>
+
+
+    <hr>
+    <h1>4. The longest consecutive elements sequence in an array</h1>
+    <div fxLayout="row" fxLayoutAlign="space-around center" [style.width]="'-webkit-fill-available'">
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Clearable input</mat-label>
+            <input matInput [(ngModel)]="consArray">
+        </mat-form-field>
+        <h4>
+            {{arrayLength}}
+        </h4>
+
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="longestConsecutiveSequencelength()">Check sequence</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="showLogic(this.longestConsecutiveSequencelength)">Show
+                Logic</button>
+        </div>
+    </div>
+
+    <hr>
+    <h1>5. Find the duplicate elements from the arrayy</h1>
+    <div fxLayout="row" fxLayoutAlign="space-around center" [style.width]="'-webkit-fill-available'">
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Clearable input</mat-label>
+            <input matInput [(ngModel)]="dupliArray">
+        </mat-form-field>
+        <h4>
+            {{duplicateElements}}
+        </h4>
+
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="duplicateElementsInArray()">Check sequence</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="showLogic(this.duplicateElementsInArray)">Show Logic</button>
+        </div>
+    </div>
+
+    <hr>
+    <h1>5. Stop Watch</h1>
+    <div fxLayout="row" fxLayoutAlign="space-around center" [style.width]="'-webkit-fill-available'">
+    
+        <h4>
+           Minutes: {{minutes}} &nbsp; seconds: {{seconds}}
+        </h4>
+
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="stopWatch('start')">START</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="stopWatch('pause')">PAUSE</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="stopWatch('stop')">STOP</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="showLogic(this.stopWatch)">Show Logic</button>
+        </div>
+    </div>
+</div>
+<!-- <div fxLayout="column" fxLayoutAlign="start start" fxFlex="40">
+    <pre>{{showMylogic}}</pre>
+</div> -->

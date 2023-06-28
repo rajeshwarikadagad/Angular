@@ -1,0 +1,29 @@
+<div>
+    <img src="../../../favicon.ico">
+</div>
+<div fxLayout="row" fxLayoutAlign=" none">
+    <div fxLayout="column" fxLayoutAlign="start start" fxFlex="50">
+        <div *ngFor="let item of tempArr; index as i ">
+            Table - {{i+1}}
+            <table>
+
+                <head>
+                    <th>S.No {{i+1}}</th>
+                    <th>Name</th>
+                    <th>BOB</th>
+                    <th>Phone No</th>
+                </head>
+
+                <body>
+                    <tr *ngFor="let data of item; index as x" style="height:10px">
+                        <td>{{x+1}}</td>
+                        <td>{{data?.value2}}</td>
+                        <td>{{data?.value3}}</td>
+                        <td>{{data?.value4}}</td>
+                    </tr>
+                </body>
+            </table>
+        </div>
+    </div>
+   
+</div>
