@@ -1,0 +1,15 @@
+<div class="padding"> 
+  <h1>TO DO LIST</h1>  
+  <div>
+    <mat-form-field style="padding-right: 10px;" appearance="fill">
+        <input matInput [(ngModel)]="item">
+    </mat-form-field>
+        <button mat-raised-button color="primary" (click)="onCLickAdd()">Add</button>
+  </div>
+  <div>{{progrssCount}} remaining out of {{itemLength}} tasks</div> 
+  <div>
+    <ul *ngFor="let list of UserList">
+        <li [ngClass]="list.isDone? 'strike' : '' " (click)="onClickList(list)">{{list.item}}</li>
+    </ul>
+  </div>
+</div>
